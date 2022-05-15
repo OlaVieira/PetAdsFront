@@ -1,0 +1,16 @@
+.main-button {
+    border: 0;
+    border-radius: 3px;
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #074d7b;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main-button:hover {
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
