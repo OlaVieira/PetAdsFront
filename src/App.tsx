@@ -5,14 +5,13 @@ import { SearchContext } from './contexts/search.context';
 
 export const App = () => {
     const [search, setSearch] = useState('');
-  return (
-    <>
+
+    return (
         <SearchContext.Provider value={{search, setSearch}}>
             <Header/>
             <Map/>
         </SearchContext.Provider>
 
-    </>
   );
 };
 

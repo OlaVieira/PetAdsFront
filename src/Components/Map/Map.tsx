@@ -1,32 +1,46 @@
-import React, {useContext, useEffect} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import '../../utils/fix-map-icon';
 import 'leaflet/dist/leaflet.css';
 import './Map.css';
 import {SearchContext} from "../../contexts/search.context";
+import {SimpleAdEntity} from 'types';
+import {SingleAd} from "./SingleAd";
 
 export const Map = () => {
     const {search} = useContext(SearchContext);
+    const [ads, setAds] = useState<SimpleAdEntity[]>([])
 
     useEffect(() => {
         console.log('Make request to search for', search);
     }, [search]);
 
+    useEffect(() => {
+        (async () => {
+            const res = await fetch(`http://localhost:3001/ad/search/${search}`);
+            const data = await res.json();
+            setAds(data);
+        })();
+    }, [search]);
+
     return (
         <div className="map">
-            <h1>Search for: {search}</h1>
+            <h3 className="search-for">Search for: {search}</h3>
             <MapContainer center={[52.2317874, 21.0036583]} zoom={15}>
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> & contributors"
                 />
-                <Marker position={[52.2317874, 21.0036583]}>
-                    <Popup>
-                        <h2>Pet's smile</h2>
-                        <p>Great company for your pet</p>
-                    </Popup>
+                {
+                    ads.map(ad => (
+                        <Marker key={ad.id} position={[ad.lat, ad.lon]}>
+                            <Popup>
+                                <SingleAd id={ad.id}/>
+                            </Popup>
+                        </Marker>
+                    ))
+                }
 
-                </Marker>
 
             </MapContainer>
         </div>
