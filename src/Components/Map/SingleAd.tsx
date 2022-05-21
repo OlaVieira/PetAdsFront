@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {AdEntity} from 'types';
+
 interface Props {
     id: string;
 }
@@ -25,7 +26,7 @@ export const SingleAd = (props: Props) => {
         <p>{ad.description}</p>
         {!!ad.price && <p>{ad.price} PLN per day</p>}
         <hr/>
-        <a href={ad.url} target="_blank">Open the ad</a>
+        <a href={ad.url} target="_blank" rel="noreferrer">Open the ad</a>
 
     </>
 
