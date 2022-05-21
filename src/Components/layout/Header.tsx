@@ -16,7 +16,7 @@ export const Header = () => {
             <h1>
                 <strong>Petsitters</strong> ads <i className="fa-solid fa-paw"></i>
             </h1>
-            <Btn text="Add an ad"/>
+            <Btn to="/add" text="Add an ad"/>
             <form className="search" onSubmit={setSearchFromLocalState}>
                 <input type="text" value={inputVal} onChange={e => setInputVal(e.target.value)}/>
                 <button className="search-button"><i className="fa-solid fa-magnifying-glass"></i></button>

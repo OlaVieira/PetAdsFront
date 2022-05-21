@@ -1,9 +1,13 @@
 import React from "react";
 import './Btn.css';
+import {Link} from "react-router-dom";
 
 interface Props {
     text: string;
+    to?: string;
 }
 export const Btn = (props: Props) => (
-    <button className="main-button">{props.text}</button>
+    props.to
+        ? <Link className="btn" to={props.to}>{props.text}</Link>
+        : <button className="main-button">{props.text}</button>
 );
