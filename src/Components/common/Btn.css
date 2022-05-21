@@ -9,6 +9,7 @@
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
+    transition: 0.4s;
 }
 
 .main-button:hover, .btn:hover {

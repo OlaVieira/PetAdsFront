@@ -28,6 +28,7 @@ i {
     border-radius: 50%;
     background-color: cornflowerblue;
     border: none;
+    transition: 0.4s;
 }
 
 .search-button:hover {
