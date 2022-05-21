@@ -13,9 +13,9 @@ export const Header = () => {
     }
     return (
         <header>
-            <h1>
+            <a className="title" href="http://localhost:3000/">
                 <strong>Petsitters</strong> ads <i className="fa-solid fa-paw"></i>
-            </h1>
+            </a>
             <Btn to="/add" text="Add an ad"/>
             <form className="search" onSubmit={setSearchFromLocalState}>
                 <input type="text" value={inputVal} onChange={e => setInputVal(e.target.value)}/>

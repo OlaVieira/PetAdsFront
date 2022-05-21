@@ -5,11 +5,14 @@ header {
     display: flex;
     justify-content: space-between;
 }
-h1 {
+
+.title {
     margin-top: 8px;
     font-size: 20px;
     text-transform: uppercase;
-    cursor: default;
+    cursor: pointer;
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 
