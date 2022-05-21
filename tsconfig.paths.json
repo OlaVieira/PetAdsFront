@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": [
-      "../mega-ads-back/types"
-    ]
-
+    "paths": {
+      "types": [
+        "../mega-ads-back/types"
+      ]
+    }
   }
 }
