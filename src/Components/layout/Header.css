@@ -46,7 +46,7 @@ i {
         font-size: 18px;
     }
     .search input {
-        width: 100px;
+        width: 120px;
     }
 }
 @media (max-width: 460px) {
