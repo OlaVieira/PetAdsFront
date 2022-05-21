@@ -1,3 +1,7 @@
+.add-form h1 {
+    text-transform: uppercase;
+}
+
 .add-form{
     width: 35vw;
     min-width: 360px;

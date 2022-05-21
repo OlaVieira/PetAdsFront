@@ -21,13 +21,14 @@ export const SingleAd = (props: Props) => {
         return <p>Loading...</p>
     }
 
-    return <>
-        <h2>{ad.name}</h2>
-        <p>{ad.description}</p>
-        {!!ad.price && <p>{ad.price} PLN per day</p>}
-        <hr/>
-        <a href={ad.url} target="_blank" rel="noreferrer">Open the ad</a>
+    return  <>
+                <h2>{ad.name}</h2>
+                <p>{ad.description}</p>
+                {!!ad.price && <p>{ad.price} PLN per day</p>}
+                <hr/>
+                <a href={ad.url} target="_blank" rel="noreferrer">Open the ad</a>
 
-    </>
+            </>
+
 
 }
