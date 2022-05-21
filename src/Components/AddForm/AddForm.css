@@ -1,0 +1,43 @@
+.add-form{
+    width: 35vw;
+    min-width: 360px;
+    margin: 30px auto;
+}
+.add-form h1{
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 20px;
+ }
+
+.add-form input, textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    border: black 2px solid;
+}
+
+.add-form label {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #074d7b;
+    margin-bottom: 25px;
+}
+
+.add-form label small {
+    font-weight: normal;
+}
+
+.add-form button {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    border: #074d7b solid 2px;
+}
+
+h2 {
+    margin-top: 200px;
+    font-size: 0.9rem;
+    text-align: center;
+}
