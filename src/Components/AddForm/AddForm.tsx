@@ -1,7 +1,7 @@
 import React, {SyntheticEvent, useState} from "react";
 import {Btn} from "../common/Btn";
 import {geocode} from "../../utils/geocoding";
-import {apiUrl} from "../../config/api";
+import {apiUrl} from "../../../config/api";
 import './AddForm.css';
 
 export const AddForm = () => {

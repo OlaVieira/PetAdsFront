@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {AdEntity} from 'types';
-import {apiUrl} from "../../config/api";
+import {apiUrl} from "../../../config/api";
 
 interface Props {
     id: string;
