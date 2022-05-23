@@ -3,7 +3,7 @@ import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import {SearchContext} from "../../contexts/search.context";
 import {SimpleAdEntity} from 'types';
 import {SingleAd} from "./SingleAd";
-import {apiUrl} from "../../../config/api";
+import {apiUrl} from "../../config/api";
 import '../../utils/fix-map-icon';
 import 'leaflet/dist/leaflet.css';
 import './Map.css';
